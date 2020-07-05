@@ -1,0 +1,41 @@
+<div class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-4">
+
+        <h1 class="title is-3"> Flickr Photo Stream </h1>
+
+        <div>
+          <%= simple_form_for :search, method: "GET", local: true do |form| %>
+          <div class="field">
+            <div class="control">
+            <%= form.input :user_id, label: "Flickr User ID", wrapper:false, input_html: { class:"input"},
+                                    label_html: { class:"label"}, placeholder: "search flickr photos by user ID" %>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
+              <%= form.submit "Show Photo", class:"button is-info" %>
+            </div>
+          </div>
+          <% end %>
+        </div><br />
+
+        <div>
+          <% if params[:search] %>
+          <h3 class="title is-5"> Photo search result: </h3>
+            <% @photos.each do |photo| %>
+            <ul>
+              <li>
+                <img src="<%=Flickr.url(photo) %>"  />
+              </li>
+            </ul>
+            <% end %>
+          <% end %>
+        </div>
+
+    </div>
+    </div>
+  </div>
+</div>
