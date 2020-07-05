@@ -25,11 +25,14 @@ gem 'jbuilder', '~> 2.7'
 # API configuration environment variable setup.
 gem "figaro"
 
+# flickr gem
+gem 'flickr', '~> 2.0', '>= 2.0.2'
+
 # formbuilder
 gem 'simple_form'
 
 gem 'better_errors', '~> 2.1', '>= 2.1.1'
-
+gem 'bulma-rails', '~> 0.9.0'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  resources :static_pages
+  resources :staticpages, only: [:index ]
 
-  root to: "static_pages#new"
+  root to: "staticpages#index"
 end
