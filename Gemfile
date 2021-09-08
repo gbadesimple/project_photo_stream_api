@@ -31,7 +31,7 @@ gem 'flickr', '~> 2.0', '>= 2.0.2'
 # formbuilder
 gem 'simple_form'
 
-gem 'better_errors', '~> 2.1', '>= 2.1.1'
+gem 'better_errors', '~> 2.8'
 gem 'bulma-rails', '~> 0.9.0'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
